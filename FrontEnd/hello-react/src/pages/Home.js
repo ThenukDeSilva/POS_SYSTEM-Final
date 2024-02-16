@@ -100,17 +100,19 @@ const Home = () => {
 
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Navbar</a>
+                    <a class="navbar-brand" href="#">My POS</a>
 
                     <div class="collapse navbar-collapse" id="navbar">
                         <ul class="navbar-nav">
                             {categories && categories.map((category) => (
-                                <li class="nav-item">
+                                <li class="nav-item" style={{ marginRight: '10px' }}>
+                                    <button className="btn btn-warning">
                                     <Link to={`/categories/${category.id}`} className="Nav-link"> {category.name} </Link>
+                                    </button>
                                 </li>
                             ))}
                             <li class="nav-item">
-                                <button className="btn btn-secondary" onClick={handleLogout}>Logout</button>
+                                <button className="btn btn-danger" onClick={handleLogout}>Logout</button>
                                 </li>
                         </ul>
 
