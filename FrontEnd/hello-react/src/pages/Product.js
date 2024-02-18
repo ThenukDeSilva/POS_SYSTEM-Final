@@ -10,6 +10,7 @@ const Product = () => {
     useEffect(() => {
         getProducts();
     }, []);
+    
 
     const getProducts = async () => {
         try {
@@ -25,7 +26,8 @@ const Product = () => {
 
     return (
         <>
-            <h1>Product</h1>
+            <div className="body">
+            <h1>Products</h1>
 
             <div className="card-container">
                 {products &&
@@ -42,7 +44,7 @@ const Product = () => {
                     ))}
             </div>
 
-
+        </div >
 
         </>
     )

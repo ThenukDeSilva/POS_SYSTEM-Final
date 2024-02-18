@@ -7,10 +7,10 @@ const Home = () => {
     const [products, setProducts] = useState(null);
     const [categories, setCategories] = useState(null);
 
-    const [name, setName] = useState(null);
-    const [price, setPrice] = useState(null);
-    const [qty, setQty] = useState(null);
-    const [categoryId, setCategoryId] = useState(null);
+    // const [name, setName] = useState(null);
+    // const [price, setPrice] = useState(null);
+    // const [qty, setQty] = useState(null);
+    // const [categoryId, setCategoryId] = useState(null);
 
     useEffect(() => {
         getProducts();
@@ -44,57 +44,57 @@ const Home = () => {
 
     }
 
-    const handleName = (event) => {
-        setName(event.target.value);
-    }
+    // const handleName = (event) => {
+    //     setName(event.target.value);
+    // }
 
-    const handlePrice = (event) => {
-        setPrice(event.target.value);
-    }
+    // const handlePrice = (event) => {
+    //     setPrice(event.target.value);
+    // }
 
-    const handleQty = (event) => {
-        setQty(event.target.value);
-    }
+    // const handleQty = (event) => {
+    //     setQty(event.target.value);
+    // }
 
-    const handleCategory = (event) => {
-        setCategoryId(event.target.value);
-    }
+    // const handleCategory = (event) => {
+    //     setCategoryId(event.target.value);
+    // }
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
+    // const handleSubmit = (event) => {
+    //     event.preventDefault();
 
-        const data = {
-            "name": name,
-            "price": price,
-            "qty": qty,
-            "categoryId": categoryId
-        }
+    //     const data = {
+    //         "name": name,
+    //         "price": price,
+    //         "qty": qty,
+    //         "categoryId": categoryId
+    //     }
 
-        fetch("http://localhost:8081/products", {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        }).then((response) => {
-            return response.json();
-        }).then((data) => {
-            setProducts([...products, data]);
-            setCategoryId(null);
-            setName(null);
-            setPrice(null);
-            setQty(null);
-        }).catch(error => {
-            console.log(error);
-        })
-    }
+    //     fetch("http://localhost:8081/products", {
+    //         method: 'POST',
+    //         headers: {
+    //             'Accept': 'application/json',
+    //             'Content-Type': 'application/json'
+    //         },
+    //         body: JSON.stringify(data)
+    //     }).then((response) => {
+    //         return response.json();
+    //     }).then((data) => {
+    //         setProducts([...products, data]);
+    //         setCategoryId(null);
+    //         setName(null);
+    //         setPrice(null);
+    //         setQty(null);
+    //     }).catch(error => {
+    //         console.log(error);
+    //     })
+    // }
 
     const handleLogout = () => {
         localStorage.removeItem("token");
         navigate("/login");
     }
-    
+
     return (
         <>
 
@@ -106,29 +106,27 @@ const Home = () => {
                         <ul class="navbar-nav">
                             {categories && categories.map((category) => (
                                 <li class="nav-item" style={{ marginRight: '10px' }}>
-                                    <button className="btn btn-warning">
-                                    <Link to={`/categories/${category.id}`} className="Nav-link"> {category.name} </Link>
-                                    </button>
+                                    <Link to={`/categories/${category.id}`} className="btn btn-warning">{category.name}</Link>
                                 </li>
                             ))}
                             <li class="nav-item">
                                 <button className="btn btn-danger" onClick={handleLogout}>Logout</button>
-                                </li>
+                            </li>
                         </ul>
 
                     </div>
                 </div>
             </nav>
+            <div class="marquee">
+                <span>Welcome to XYZ Store - Your one-stop shop for all your shopping needs! Explore our wide range of products including groceries, electronics, clothing, and more. Don't miss out on our special offers and discounts. Happy shopping!</span>
+            </div>
 
             <h1>Home</h1>
 
-            <ul>
-                <li>
-                    <Link to="/products">products</Link>
-                </li>
-            </ul>
-
-            <button onClick={getProducts}>Get Products</button>
+            <Link to="/products" className="btn-custom">Check Products</Link>
+            <br />
+            <br />
+            <Link to="/addproduct" className="btn-custom">Add Products</Link>
 
             <ol>
                 {products && products.map((product) => (
@@ -138,7 +136,7 @@ const Home = () => {
                 ))}
             </ol>
 
-            <form onSubmit={handleSubmit}>
+            {/* <form onSubmit={handleSubmit}>
                 <div>
                     <label>Product Name</label>
                     <input type="text" required onChange={handleName} value={name} />
@@ -165,10 +163,10 @@ const Home = () => {
 
                     </select>
                 </div>
+                            <br/>
+                <button className="btn-custom" type="submit">Save Product</button>
 
-                <button className="btn btn-primary" type="submit">Save Product</button>
-
-            </form>
+            </form> */}
         </>
     )
 }

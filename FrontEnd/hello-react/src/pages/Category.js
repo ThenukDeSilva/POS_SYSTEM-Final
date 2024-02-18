@@ -36,12 +36,13 @@ useEffect(()=>{
 
 return(
     <>
+    <h5>Categories</h5>
     {category&&
     <h1>{category.name}</h1>
     }
     <ol>
         {products && products.map((product)=>(
-            <li><link to={`/products/${product.id}`}>{product.name}</link></li>
+            <li><link to={`/products/${product.id}/products`}>{product.name}</link></li>
         ))}
     </ol>
     </>

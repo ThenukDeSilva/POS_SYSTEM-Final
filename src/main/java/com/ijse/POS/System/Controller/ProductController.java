@@ -28,7 +28,7 @@ public class ProductController {
         return ResponseEntity.status(200).body(productService.getAllProducts());
     }
 
-    @PostMapping("/products")
+    @PostMapping("/addproducts")
     public ResponseEntity<?> createProduct(@RequestBody ProductDto productDto) {
         try {
             return ResponseEntity.status(HttpStatus.CREATED).body(productService.createProduct(productDto));

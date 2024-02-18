@@ -147,3 +147,88 @@ body{
 .btn-primary:hover {
   background-color: #0056b3; /* Change background color on hover */
 }
+
+.btn-custom {
+  padding: 10px 20px; /* Add padding to the button */
+  font-size: 16px; /* Set font size for the button */
+  border: none; /* Remove border from the button */
+  border-radius: 4px; /* Add border radius for rounded corners */
+  background-color: #4CAF50; /* Set background color for the button */
+  color: white; /* Set text color for the button */
+  text-align: center; /* Center align text within the button */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Make the button inline block element */
+  cursor: pointer; /* Change cursor on hover */
+}
+
+.btn-custom:hover {
+  background-color: #45a049; /* Change background color on hover */
+}
+
+#add-product-form {
+  max-width: 400px; /* Set the maximum width of the form */
+  margin: 0 auto; /* Center the form horizontally */
+}
+
+#add-product-form label {
+  display: block; /* Make labels block-level elements */
+  margin-bottom: 5px; /* Add some space below the labels */
+}
+
+#add-product-form input[type="text"],
+#add-product-form select {
+  width: 100%; /* Set the width of the input fields and select dropdown to 100% */
+  padding: 10px; /* Add padding to the input fields and select dropdown */
+  margin-bottom: 10px; /* Add some space below the input fields and select dropdown */
+  border: 1px solid #ccc; /* Add a border around the input fields and select dropdown */
+  border-radius: 4px; /* Add border radius for rounded corners */
+}
+
+#add-product-form select {
+  appearance: none; /* Remove default dropdown arrow */
+}
+
+#add-product-form button {
+  width: 100%; /* Set the width of the button to 100% */
+  padding: 10px; /* Add padding to the button */
+  font-size: 16px; /* Set font size for the button */
+  border: none; /* Remove border from the button */
+  border-radius: 4px; /* Add border radius for rounded corners */
+  background-color: #007bff; /* Set background color for the button */
+  color: #fff; /* Set text color for the button */
+  cursor: pointer; /* Change cursor on hover */
+}
+
+#add-product-form button:hover {
+  background-color: #0056b3; /* Change background color on hover */
+}
+
+#add-product-form h1 {
+  text-align: center; /* Center-align the heading */
+  margin-bottom: 20px; /* Add some space below the heading */
+  font-size: 24px; /* Set the font size of the heading */
+}
+
+/* Adjust the width and other properties of the .marquee container as needed */
+.marquee {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Apply the marquee animation to the span elements */
+.marquee span {
+  display: inline-block;
+  padding-right: 20px;
+  white-space: nowrap; /* Prevent text from wrapping */
+  animation: marquee 20s linear infinite; /* Apply the marquee animation */
+}
+
+/* Define the marquee animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
