@@ -55,7 +55,7 @@ const Checkout = () => {
                                     let currentTotal=total;
                                     currentTotal=currentTotal+product.price;
                                     setTotal(currentTotal);
-
+                                    
                                 }}>Add to Order</button>
                             </div>
                         ))}

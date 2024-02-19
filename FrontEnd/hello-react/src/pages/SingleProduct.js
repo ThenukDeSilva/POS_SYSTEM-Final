@@ -21,6 +21,7 @@ const SingleProduct = () => {
                 console.log(error);
             })
     }
+
     return (
         <>
             <div>

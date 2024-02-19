@@ -1,6 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import image1 from "../assests/dashboard 1.jpg";
+import image2 from "../assests/dashboard 2.jpg";
+import image3 from "../assests/dashboard 3.jpg";
 
 const Home = () => {
 
@@ -123,18 +126,44 @@ const Home = () => {
 
             <h1>Home</h1>
 
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src={image1} alt="First slide" />
+                    </div>
+                    <div class="carousel-item ">
+                        <img class="d-block w-100" src={image2} alt="Second slide" />
+                    </div>
+                    <div class="carousel-item ">
+                        <img class="d-block w-100" src={image3} alt="Third slide" />
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+<br/>
             <Link to="/products" className="btn-custom">Check Products</Link>
             <br />
             <br />
             <Link to="/addproduct" className="btn-custom">Add Products</Link>
+            <br />
+            <br />
+            <Link to="/stocks" className="btn-custom">Check Stocks</Link>
 
-            <ol>
+
+            {/* <ol>
                 {products && products.map((product) => (
                     <li>
                         <Link to={`/products/${product.id}`}>{product.name}</Link>
                     </li>
                 ))}
-            </ol>
+            </ol> */}
 
             {/* <form onSubmit={handleSubmit}>
                 <div>
@@ -167,6 +196,7 @@ const Home = () => {
                 <button className="btn-custom" type="submit">Save Product</button>
 
             </form> */}
+
         </>
     )
 }

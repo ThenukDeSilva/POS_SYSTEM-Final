@@ -33,6 +33,7 @@ const Register = () => {
         const response = await axios.post(`http://localhost:8081/auth/register`, data);
 
         if(response.status===200){
+            alert("You have successfully registered")
            navigate("/login")
         }else{
             console.log("error");

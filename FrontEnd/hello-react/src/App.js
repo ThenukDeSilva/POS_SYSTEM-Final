@@ -10,6 +10,8 @@ import SingleProduct from './pages/SingleProduct';
 import Login from './pages/auth/Login';
 import ProtectedRoutes from './pages/utils/ProtectedRoutes';
 import AddProducts from './pages/AddProducts';
+import Cart from './pages/Cart';
+import Stocks from './pages/Stocks';
 
 const App = () => {
   return (
@@ -22,6 +24,8 @@ const App = () => {
           <Route path="/categories/:id" element={<Category />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/addproduct" element={<AddProducts />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/stocks" element={<Stocks />} />
         </Route>
 
         <Route path="/login" element={<Login />} />

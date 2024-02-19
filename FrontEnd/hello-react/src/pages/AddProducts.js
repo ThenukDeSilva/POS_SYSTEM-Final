@@ -45,36 +45,63 @@ const AddProducts = () => {
         setCategoryId(event.target.value);
     }
 
-
-    const handleSubmit = (event) => {
+    const handleSubmit=async (event)=>{
         event.preventDefault();
 
         const data = {
-            "name": name,
-            "price": price,
-            "qty": qty,
-            "categoryId": categoryId
-        }
+                    "name": name,
+                    "price": price,
+                    "qty": qty,
+                    "categoryId": categoryId
+                };
 
-        fetch("http://localhost:8081/products", {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        }).then((response) => {
-            return response.json();
-        }).then((data) => {
-            setProducts([...products, data]);
-            setCategoryId(null);
-            setName(null);
-            setPrice(null);
-            setQty(null);
-        }).catch(error => {
-            console.log(error);
-        })
-    }
+                try {
+                    const response = await axios.post("http://localhost:8081/products", data, {
+                        headers: {
+                            'Accept': 'application/json',
+                            'Content-Type': 'application/json'
+                        }
+                    });
+            
+                    setProducts([...products, response.data]);
+                    setCategoryId(null);
+                    setName('');
+                    setPrice('');
+                    setQty('');
+                } catch (error) {
+                    console.error("Error:", error);
+                }
+            };
+    
+    // const handleSubmit = (event) => {
+    //     event.preventDefault();
+
+    //     const data = {
+    //         "name": name,
+    //         "price": price,
+    //         "qty": qty,
+    //         "categoryId": categoryId
+    //     }
+
+    //     fetch("http://localhost:8081/products", {
+    //         method: 'POST',
+    //         headers: {
+    //             'Accept': 'application/json',
+    //             'Content-Type': 'application/json'
+    //         },
+    //         body: JSON.stringify(data)
+    //     }).then((response) => {
+    //         return response.json();
+    //     }).then((data) => {
+    //         setProducts([...products, data]);
+    //         setCategoryId(null);
+    //         setName(null);
+    //         setPrice(null);
+    //         setQty(null);
+    //     }).catch(error => {
+    //         console.log(error);
+    //     })
+    // }
 
     return (
         <>
