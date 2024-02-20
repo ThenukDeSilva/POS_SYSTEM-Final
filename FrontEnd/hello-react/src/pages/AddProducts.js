@@ -68,6 +68,7 @@ const AddProducts = () => {
                     setName('');
                     setPrice('');
                     setQty('');
+                    alert("Product added successfully");
                 } catch (error) {
                     console.error("Error:", error);
                 }

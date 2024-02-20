@@ -10,10 +10,6 @@ const Home = () => {
     const [products, setProducts] = useState(null);
     const [categories, setCategories] = useState(null);
 
-    // const [name, setName] = useState(null);
-    // const [price, setPrice] = useState(null);
-    // const [qty, setQty] = useState(null);
-    // const [categoryId, setCategoryId] = useState(null);
 
     useEffect(() => {
         getProducts();
@@ -47,52 +43,6 @@ const Home = () => {
 
     }
 
-    // const handleName = (event) => {
-    //     setName(event.target.value);
-    // }
-
-    // const handlePrice = (event) => {
-    //     setPrice(event.target.value);
-    // }
-
-    // const handleQty = (event) => {
-    //     setQty(event.target.value);
-    // }
-
-    // const handleCategory = (event) => {
-    //     setCategoryId(event.target.value);
-    // }
-
-    // const handleSubmit = (event) => {
-    //     event.preventDefault();
-
-    //     const data = {
-    //         "name": name,
-    //         "price": price,
-    //         "qty": qty,
-    //         "categoryId": categoryId
-    //     }
-
-    //     fetch("http://localhost:8081/products", {
-    //         method: 'POST',
-    //         headers: {
-    //             'Accept': 'application/json',
-    //             'Content-Type': 'application/json'
-    //         },
-    //         body: JSON.stringify(data)
-    //     }).then((response) => {
-    //         return response.json();
-    //     }).then((data) => {
-    //         setProducts([...products, data]);
-    //         setCategoryId(null);
-    //         setName(null);
-    //         setPrice(null);
-    //         setQty(null);
-    //     }).catch(error => {
-    //         console.log(error);
-    //     })
-    // }
-
     const handleLogout = () => {
         localStorage.removeItem("token");
         navigate("/login");
@@ -124,7 +74,7 @@ const Home = () => {
                 <span>Welcome to XYZ Store - Your one-stop shop for all your shopping needs! Explore our wide range of products including groceries, electronics, clothing, and more. Don't miss out on our special offers and discounts. Happy shopping!</span>
             </div>
 
-            <h1>Home</h1>
+            <h1><center>Hi! Welcome to MyPOS</center></h1>
 
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
@@ -147,55 +97,20 @@ const Home = () => {
                     <span class="sr-only">Next</span>
                 </a>
             </div>
-<br/>
-            <Link to="/products" className="btn-custom">Check Products</Link>
             <br />
-            <br />
-            <Link to="/addproduct" className="btn-custom">Add Products</Link>
-            <br />
-            <br />
-            <Link to="/stocks" className="btn-custom">Check Stocks</Link>
 
+            <div class="home-buttons">
+                <Link to="/products" className="btn-custom">Check Products</Link>
 
-            {/* <ol>
-                {products && products.map((product) => (
-                    <li>
-                        <Link to={`/products/${product.id}`}>{product.name}</Link>
-                    </li>
-                ))}
-            </ol> */}
+                <Link to="/addproduct" className="btn-custom">Add Products</Link>
 
-            {/* <form onSubmit={handleSubmit}>
-                <div>
-                    <label>Product Name</label>
-                    <input type="text" required onChange={handleName} value={name} />
-                </div>
+                <Link to="/stocks" className="btn-custom">Check Stocks</Link>
+            </div>
 
-                <div>
-                    <label>Product Price</label>
-                    <input type="text" required onChange={handlePrice} value={price} />
-                </div>
-
-                <div>
-                    <label>Product Qty</label>
-                    <input type="text" required onChange={handleQty} value={qty} />
-                </div>
-
-                <div>
-                    <label>Category</label>
-                    <select required onChange={handleCategory}>
-                        <option>Please Select</option>
-
-                        {categories && categories.map((category) => (
-                            <option key={category.id} value={category.id}>{category.name}</option>
-                        ))}
-
-                    </select>
-                </div>
-                            <br/>
-                <button className="btn-custom" type="submit">Save Product</button>
-
-            </form> */}
+            <footer>
+                Thanks for using MyPOS<br/>
+                ~Thenuk De Silva~
+            </footer>
 
         </>
     )

@@ -180,10 +180,12 @@ const Product = () => {
                         </>
                     )}
                 </div>
-
-
             </div >
-
+            
+            <footer>
+                Thanks for using MyPOS<br />
+                ~Thenuk De Silva~
+            </footer>
         </>
     )
 }
