@@ -7,9 +7,9 @@ const AddProducts = () => {
     const [name, setName] = useState(null);
     const [price, setPrice] = useState(null);
     const [qty, setQty] = useState(null);
-    const [categoryId, setCategoryId] = useState(null);
+    const [categoryId, setCategoryId] = useState('');
 
-    const [products, setProducts] = useState(null);
+    const [products, setProducts] = useState([]);
     const [categories, setCategories] = useState(null);
 
     useEffect(() => {
@@ -64,7 +64,7 @@ const AddProducts = () => {
                     });
             
                     setProducts([...products, response.data]);
-                    setCategoryId(null);
+                    setCategoryId('');
                     setName('');
                     setPrice('');
                     setQty('');
