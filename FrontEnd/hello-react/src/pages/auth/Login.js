@@ -17,24 +17,37 @@ const Login = ()=>{
         setPassword(event.target.value);
     }
 
-    const handleLogin=async (event)=>{
+    const handleLogin = async (event) => {
         event.preventDefault();
-
-        const data={
-            "username":username,
-            "password":password
+    
+        const data = {
+            "username": username,
+            "password": password
         }
-
-        const response=await axios.post(`http://localhost:8081/auth/login`,data);
-
-        if (response.status===200){
-            localStorage.setItem("token",response.data);
-            axios.defaults.headers.common["Authorization"]=`Bearer ${response.data}`;
-            navigate("/");
-        } else{
-            console.log("Login error");
+    
+        try {
+            const response = await axios.post(`http://localhost:8081/auth/login`, data);
+    
+            if (response.status === 200) {
+                localStorage.setItem("token", response.data);
+                axios.defaults.headers.common["Authorization"] = `Bearer ${response.data}`;
+                navigate("/");
+            } else {
+                console.log("Login error");
+                // Display login unsuccessful message
+                alert("Login unsuccessful");
+                // Navigate back to the login page
+                navigate("/login");
+            }
+        } catch (error) {
+            console.error("Error occurred during login:", error);
+            // Display login unsuccessful message
+            alert("Login unsuccessful");
+            // Navigate back to the login page
+            navigate("/login");
         }
     }
+    
 
     return(
     <div className="login-box">
