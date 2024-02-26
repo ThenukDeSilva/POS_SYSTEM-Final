@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import image1 from "../assests/dashboard 1.jpg";
 import image2 from "../assests/dashboard 2.jpg";
 import image3 from "../assests/dashboard 3.jpg";
+import image4 from "../assests/pos Image.png";
 
 const Home = () => {
 
@@ -53,18 +54,25 @@ const Home = () => {
 
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">My POS</a>
+                    <a class="navbar-brand" href="#">
+                    <img src={image4} alt="Logo" height="50"/>
+                          My POS</a>
 
                     <div class="collapse navbar-collapse" id="navbar">
                         <ul class="navbar-nav">
-                            {categories && categories.map((category) => (
-                                <li class="nav-item" style={{ marginRight: '10px' }}>
-                                    <Link to={`/categories/${category.id}`} className="btn btn-warning">{category.name}</Link>
-                                </li>
-                            ))}
+
+                            <Link to="/products" className="btn-custom">Check Products</Link>
+
+                            <Link to="/addproduct" className="btn-custom">Add Products</Link>
+
+                            <Link to="/stocks" className="btn-custom">Check Stocks</Link>
+
+
+
                             <li class="nav-item">
                                 <button className="btn btn-danger" onClick={handleLogout}>Logout</button>
                             </li>
+                            
                         </ul>
 
                     </div>
@@ -100,15 +108,15 @@ const Home = () => {
             <br />
 
             <div class="home-buttons">
-                <Link to="/products" className="btn-custom">Check Products</Link>
 
-                <Link to="/addproduct" className="btn-custom">Add Products</Link>
+                {categories && categories.map((category) => (
+                        <Link to={`/categories/${category.id}`} className="btn btn-warning">{category.name}</Link>
+                ))}
 
-                <Link to="/stocks" className="btn-custom">Check Stocks</Link>
             </div>
 
             <footer>
-                Thanks for using MyPOS<br/>
+                Thanks for using MyPOS<br />
                 ~Thenuk De Silva~
             </footer>
 

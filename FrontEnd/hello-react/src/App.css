@@ -32,18 +32,19 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
 
-.login-box{
+.login-box {
   max-width: 600px;
   margin: 0 auto;
 }
 
-.container-fluid{
+.container-fluid {
   background-color: green;
   padding: 7px;
 }
@@ -59,7 +60,7 @@
   margin-bottom: 20px;
 }
 
-body{
+body {
 
   margin: 10px;
   padding-top: 0px;
@@ -73,147 +74,222 @@ body{
 }
 
 .card {
-  width: calc(33.33% - 20px); /* Adjust the width and margin as needed */
+  width: calc(33.33% - 20px);
+  /* Adjust the width and margin as needed */
   margin-bottom: 20px;
-  border: 1px solid #ccc; /* Add a border for the card */
-  border-radius: 8px; /* Add border radius for rounded corners */
+  border: 1px solid #ccc;
+  /* Add a border for the card */
+  border-radius: 8px;
+  /* Add border radius for rounded corners */
 }
 
 .card-img-top {
-  width: 100%; /* Ensure the image fills the entire width of the card */
-  height: 200px; /* Adjust the height of the image as needed */
-  object-fit: cover; /* Ensure the image maintains its aspect ratio */
-  border-top-left-radius: 8px; /* Add rounded corners to the top left and right */
+  width: 100%;
+  /* Ensure the image fills the entire width of the card */
+  height: 200px;
+  /* Adjust the height of the image as needed */
+  object-fit: cover;
+  /* Ensure the image maintains its aspect ratio */
+  border-top-left-radius: 8px;
+  /* Add rounded corners to the top left and right */
   border-top-right-radius: 8px;
 }
 
 .card-body {
-  padding: 20px; /* Add padding inside the card body */
+  padding: 20px;
+  /* Add padding inside the card body */
 }
 
 .card-title {
-  margin-bottom: 10px; /* Add some space below the title */
+  margin-bottom: 10px;
+  /* Add some space below the title */
 }
 
 .btn-primary {
-  background-color: #007bff; /* Change the background color of the button */
-  color: #fff; /* Change the text color of the button */
-  border: none; /* Remove the border */
-  padding: 8px 16px; /* Add padding to the button */
-  border-radius: 4px; /* Add border radius for rounded corners */
-  text-decoration: none; /* Remove underline */
-  cursor: pointer; /* Change cursor on hover */
+  background-color: #007bff;
+  /* Change the background color of the button */
+  color: #fff;
+  /* Change the text color of the button */
+  border: none;
+  /* Remove the border */
+  padding: 8px 16px;
+  /* Add padding to the button */
+  border-radius: 4px;
+  /* Add border radius for rounded corners */
+  text-decoration: none;
+  /* Remove underline */
+  cursor: pointer;
+  /* Change cursor on hover */
 }
 
 .btn-primary:hover {
-  background-color: #0056b3; /* Change background color on hover */
+  background-color: #0056b3;
+  /* Change background color on hover */
 }
 
 .btn-warning {
   padding: 8px 16px;
   border-radius: 4px;
 }
-  
+
 
 .login-box {
-  max-width: 400px; /* Set the maximum width of the login box */
-  margin: 0 auto; /* Center the login box horizontally */
-  padding: 20px; /* Add some padding around the login box */
-  border: 1px solid #ccc; /* Add a border around the login box */
-  border-radius: 8px; /* Add border radius for rounded corners */
-  background-color: #fff; /* Set background color for the login box */
+  max-width: 400px;
+  /* Set the maximum width of the login box */
+  margin: 0 auto;
+  /* Center the login box horizontally */
+  padding: 20px;
+  /* Add some padding around the login box */
+  border: 1px solid #ccc;
+  /* Add a border around the login box */
+  border-radius: 8px;
+  /* Add border radius for rounded corners */
+  background-color: #fff;
+  /* Set background color for the login box */
 }
 
 .login-box h1 {
-  margin-bottom: 20px; /* Add some space below the heading */
+  margin-bottom: 20px;
+  /* Add some space below the heading */
 }
 
 .form-group {
-  margin-bottom: 20px; /* Add space between form inputs */
+  margin-bottom: 20px;
+  /* Add space between form inputs */
 }
 
 .form-control {
-  width: 100%; /* Set the width of the form inputs to 100% */
-  padding: 10px; /* Add padding to the form inputs */
-  font-size: 16px; /* Set font size for the form inputs */
-  border: 1px solid #ccc; /* Add a border around the form inputs */
-  border-radius: 4px; /* Add border radius for rounded corners */
+  width: 100%;
+  /* Set the width of the form inputs to 100% */
+  padding: 10px;
+  /* Add padding to the form inputs */
+  font-size: 16px;
+  /* Set font size for the form inputs */
+  border: 1px solid #ccc;
+  /* Add a border around the form inputs */
+  border-radius: 4px;
+  /* Add border radius for rounded corners */
 }
 
 .btn-primary {
-  width: 100%; /* Set the width of the login button to 100% */
-  padding: 10px; /* Add padding to the login button */
-  font-size: 16px; /* Set font size for the login button */
-  border: none; /* Remove border from the login button */
-  border-radius: 4px; /* Add border radius for rounded corners */
-  background-color: #007bff; /* Set background color for the login button */
-  color: #fff; /* Set text color for the login button */
-  cursor: pointer; /* Change cursor on hover */
+  width: 100%;
+  /* Set the width of the login button to 100% */
+  padding: 10px;
+  /* Add padding to the login button */
+  font-size: 16px;
+  /* Set font size for the login button */
+  border: none;
+  /* Remove border from the login button */
+  border-radius: 4px;
+  /* Add border radius for rounded corners */
+  background-color: #007bff;
+  /* Set background color for the login button */
+  color: #fff;
+  /* Set text color for the login button */
+  cursor: pointer;
+  /* Change cursor on hover */
 }
 
 .btn-primary:hover {
-  background-color: #0056b3; /* Change background color on hover */
+  background-color: #0056b3;
+  /* Change background color on hover */
 }
 
 .btn-custom {
-  padding: 10px 20px; /* Add padding to the button */
-  font-size: 16px; /* Set font size for the button */
-  border: none; /* Remove border from the button */
-  border-radius: 4px; /* Add border radius for rounded corners */
-  background-color: #4CAF50; /* Set background color for the button */
-  color: white; /* Set text color for the button */
-  text-align: center; /* Center align text within the button */
-  text-decoration: none; /* Remove underline */
-  display: inline-block; /* Make the button inline block element */
-  cursor: pointer; /* Change cursor on hover */
+  padding: 10px 20px;
+  /* Add padding to the button */
+  font-size: 16px;
+  /* Set font size for the button */
+  border: none;
+  /* Remove border from the button */
+  border-radius: 4px;
+  /* Add border radius for rounded corners */
+  background-color: #4CAF50;
+  /* Set background color for the button */
+  color: white;
+  /* Set text color for the button */
+  text-align: center;
+  /* Center align text within the button */
+  text-decoration: none;
+  /* Remove underline */
+  display: inline-block;
+  /* Make the button inline block element */
+  cursor: pointer;
+  /* Change cursor on hover */
+
+  width: 280px;
+  height: 50px;
 }
 
 .btn-custom:hover {
-  background-color: #45a049; /* Change background color on hover */
+  background-color: #45a049;
+  /* Change background color on hover */
 }
 
 #add-product-form {
-  max-width: 400px; /* Set the maximum width of the form */
-  margin: 0 auto; /* Center the form horizontally */
+  max-width: 400px;
+  /* Set the maximum width of the form */
+  margin: 0 auto;
+  /* Center the form horizontally */
 }
 
 #add-product-form label {
-  display: block; /* Make labels block-level elements */
-  margin-bottom: 5px; /* Add some space below the labels */
+  display: block;
+  /* Make labels block-level elements */
+  margin-bottom: 5px;
+  /* Add some space below the labels */
 }
 
 #add-product-form input[type="text"],
 #add-product-form select {
-  width: 100%; /* Set the width of the input fields and select dropdown to 100% */
-  padding: 10px; /* Add padding to the input fields and select dropdown */
-  margin-bottom: 10px; /* Add some space below the input fields and select dropdown */
-  border: 1px solid #ccc; /* Add a border around the input fields and select dropdown */
-  border-radius: 4px; /* Add border radius for rounded corners */
+  width: 100%;
+  /* Set the width of the input fields and select dropdown to 100% */
+  padding: 10px;
+  /* Add padding to the input fields and select dropdown */
+  margin-bottom: 10px;
+  /* Add some space below the input fields and select dropdown */
+  border: 1px solid #ccc;
+  /* Add a border around the input fields and select dropdown */
+  border-radius: 4px;
+  /* Add border radius for rounded corners */
 }
 
 #add-product-form select {
-  appearance: none; /* Remove default dropdown arrow */
+  appearance: none;
+  /* Remove default dropdown arrow */
 }
 
 #add-product-form button {
-  width: 100%; /* Set the width of the button to 100% */
-  padding: 10px; /* Add padding to the button */
-  font-size: 16px; /* Set font size for the button */
-  border: none; /* Remove border from the button */
-  border-radius: 4px; /* Add border radius for rounded corners */
-  background-color: #007bff; /* Set background color for the button */
-  color: #fff; /* Set text color for the button */
-  cursor: pointer; /* Change cursor on hover */
+  width: 100%;
+  /* Set the width of the button to 100% */
+  padding: 10px;
+  /* Add padding to the button */
+  font-size: 16px;
+  /* Set font size for the button */
+  border: none;
+  /* Remove border from the button */
+  border-radius: 4px;
+  /* Add border radius for rounded corners */
+  background-color: #007bff;
+  /* Set background color for the button */
+  color: #fff;
+  /* Set text color for the button */
+  cursor: pointer;
+  /* Change cursor on hover */
 }
 
 #add-product-form button:hover {
-  background-color: #0056b3; /* Change background color on hover */
+  background-color: #0056b3;
+  /* Change background color on hover */
 }
 
 #add-product-form h1 {
-  text-align: center; /* Center-align the heading */
-  margin-bottom: 20px; /* Add some space below the heading */
-  font-size: 24px; /* Set the font size of the heading */
+  text-align: center;
+  /* Center-align the heading */
+  margin-bottom: 20px;
+  /* Add some space below the heading */
+  font-size: 24px;
+  /* Set the font size of the heading */
 }
 
 /* Adjust the width and other properties of the .marquee container as needed */
@@ -226,8 +302,10 @@ body{
 .marquee span {
   display: inline-block;
   padding-right: 20px;
-  white-space: nowrap; /* Prevent text from wrapping */
-  animation: marquee 20s linear infinite; /* Apply the marquee animation */
+  white-space: nowrap;
+  /* Prevent text from wrapping */
+  animation: marquee 20s linear infinite;
+  /* Apply the marquee animation */
 }
 
 /* Define the marquee animation */
@@ -235,10 +313,12 @@ body{
   0% {
     transform: translateX(100%);
   }
+
   100% {
     transform: translateX(-100%);
   }
 }
+
 .cart-table {
   padding-left: 20px;
   padding-right: 20px;
@@ -247,6 +327,7 @@ body{
 .card:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
 .card-container {
   display: flex;
   flex-wrap: wrap;
@@ -266,12 +347,13 @@ body{
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.home-buttons{
+.home-buttons {
   display: flex;
 }
 
 .btn-custom {
-  margin-right: 10px; /* Adjust the margin as needed */
+  margin-right: 10px;
+  /* Adjust the margin as needed */
 }
 
 footer {
@@ -280,4 +362,52 @@ footer {
   color: #fff;
   padding: 20px;
   text-align: center;
+}
+
+.home-buttons {
+  display: flex;
+}
+
+.home-buttons .btn {
+  height: 160px;
+  width: 160px;
+  border: none;
+  border-radius: 0;
+  /* Remove border radius */
+  padding: 10px 20px;
+  /* Adjust padding as needed */
+  margin: 15px;
+  /* Add margin between buttons */
+  background-color: #ffc107;
+  /* Set background color */
+  color: #212529;
+  /* Set text color */
+  text-decoration: none;
+  /* Remove default underline */
+  line-height: 40px;
+  /* Center text vertically */
+  font-size: 16px;
+  /* Increase font size */
+  font-weight: bold;
+  /* Make text bold */
+}
+
+.home-buttons .btn:last-child {
+  margin-right: 0;
+  /* Remove margin from the last button */
+}
+
+.nav-item {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  /* Ensure the button spans the full width */
+}
+
+.navbar-brand {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 24px; /* Change font size */
+  font-weight: bold; /* Make the text bold */
+  color: #333; /* Change text color */
+  /* Add any additional styling here */
 }
